@@ -10,6 +10,12 @@ public class HomeController {
 
     @GetMapping("/Home")
     public String Home(Model model){
-        return "Home";
+
+        return "Views/Home";
+    }
+
+    @GetMapping("/Layout")
+    public String Layout(){
+        return "Views/Main";
     }
 }
