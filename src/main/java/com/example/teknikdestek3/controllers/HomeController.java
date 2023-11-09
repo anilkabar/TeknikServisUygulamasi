@@ -11,7 +11,7 @@ public class HomeController {
     @GetMapping("/Home")
     public String Home(Model model){
 
-        return "Views/Home";
+        return "Views/Main";
     }
 
     @GetMapping("/Layout")
