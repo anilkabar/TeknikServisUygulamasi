@@ -19,13 +19,22 @@ public class HomeController {
     private ICihazlarRepository cihazlarRepository;
     private Cihazlar cihazlarModel;
 
+    String mesaj="";
+    String kontrol="";
+
 
 
     @GetMapping("/Home")
     public String home(Model model){
+        //model.addAttribute("kontrol",kontrol);
         model.addAttribute("title","deneme");
+        model.addAttribute("kontrol",kontrol);
+        kontrol="";
+        mesaj="";
         return "Home";
     }
+
+
 
     @PostMapping("/CihazEkle")
     public String cihazSave(@Valid @ModelAttribute("cihazEkle") Cihazlar cihazlar){
@@ -37,8 +46,19 @@ public class HomeController {
         cihaz.setModel(cihazlar.getModel());
         cihaz.setSikayet(cihazlar.getSikayet());
         cihaz.setSeriNumarasi("number");
-        cihazlarRepository.save(cihaz);
 
-        return "redirect:/Home";
+        if (cihazlarRepository.save(cihaz)!=null){
+
+            kontrol="success";
+            mesaj="Cihaz Ekleme İşlemi Başarılı";
+            return "redirect:/Home";
+
+        }
+        else{
+            return "redirect:/Home";
+        }
+
+
     }
+
 }
