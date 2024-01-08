@@ -65,28 +65,23 @@
                                     <th>İşletim Sistemi</th>
                                     <th>Seri Numarası</th>
                                     <th width="440px">Şikayet</th>
-                                    <th>İslem</th>
+
 
                                 </tr>
 
 
                                 </thead>
                                 <tbody>
-                                <c:forEach items="${cihazlarList}" var="item">
+                                <c:forEach items="${cihazlarList}" var="item" varStatus="sayac">
+
                                     <tr>
-                                        <td>1</td>
+                                        <td>${sayac.index+1}</td>
                                         <td>${item.marka}</td>
                                         <td>${item.model}</td>
                                         <td>${item.isletimSistemi}</td>
                                         <td>${item.seriNumarasi}</td>
                                         <td>${item.sikayet}</td>
-                                        <td>
 
-                                            <a href="/IslemYap/${item.id}"><span class="label label-inverse"><i class="fa fa-mail-reply"></i> İşlem Tamamlandı</span></a>
-
-
-
-                                        </td>
                                     </tr>
                                 </c:forEach>
 

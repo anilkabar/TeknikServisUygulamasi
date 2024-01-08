@@ -12,10 +12,10 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <title>Teknik Servis Uygulması</title>
-
+    <!--Toaster Popup message CSS -->
+    <link href="resources/assets/node_modules/toast-master/css/jquery.toast.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="resources/dist/css/style.min.css" rel="stylesheet">
-    <link href="resources/assets/toastr/toastr.css" rel="stylesheet" />
 
     <script src="resources/assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
 </head>
@@ -41,103 +41,76 @@
     <c:import url="inc/Header.jsp"></c:import>
 
     <c:import url="inc/Left-Sidebar.jsp"></c:import>
-
     <div class="page-wrapper">
 
         <div class="container-fluid">
 
             <div class="row page-titles">
-
-            </div>
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">Teknik Servis Gelen Cihaz Ekleme
-                            </h4>
-                            <h6 class="card-subtitle">Aşağıdaki Formdan Gelen Cihaza Ait Bilgileri Doldurup Ekleme İşlemi Yapabilirsiniz ${kontrol}  </h6>
-                            <hr>
-                            <form action="CihazEkle" method="post">
-                                <div class="form-group row">
-                                    <label class="col-sm-1 control-label">Marka :</label>
-                                    <div class="col-sm-3">
-                                        <div class="input-group">
-                                            <input name="marka" type="text" class="form-control" required>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="form-group row">
-                                    <label class="col-sm-1 control-label">Model :</label>
-                                    <div class="col-sm-3">
-                                        <div class="input-group">
-                                            <input name="model" type="text" class="form-control" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-1 control-label">İşletim Sistemi :</label>
-                                    <div class="col-sm-3">
-                                        <div class="input-group">
-                                            <input name="isletimSistemi" type="text" class="form-control" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-1 control-label">Seri Numarası :</label>
-                                    <div class="col-sm-3">
-                                        <div class="input-group">
-                                            <input name="seriNumarasi" type="text" class="form-control" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-1 control-label">Şikayet :</label>
-                                    <div class="col-sm-3">
-                                        <div class="input-group">
-                                <textarea class="form-control" name="sikayet" rows="4" cols="50" required></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="form-group row m-b-0">
-                                    <div class="offset-sm-3 col-sm-9">
-                                        <button type="submit" class="btn btn-success waves-effect waves-light">Kaydet</button>
-                                    </div>
-                                </div>
-                                <hr>
-
-                            </form>
-
-                        </div>
-                    </div>
+                <div class="col-md-5 align-self-center">
+                    <h4 class="text-themecolor">Anasayfa</h4>
                 </div>
             </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Info box -->
+            <!-- ============================================================== -->
+            <!-- .row -->
+            <div class="row">
+                <!-- Column -->
+                <div class="col-lg-4 col-md-6">
+                    <a href="IslemBekleyenler">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex flex-row">
+                                    <div class="round align-self-center round-danger"><i class="fa fa-hourglass"></i></div>
+                                    <div class="m-l-10 align-self-center">
+                                        <h3 class="m-b-0 text-dark">${islemBekleyenCihazSayisi}</h3>
+                                        <h5 class="text-muted m-b-0">İşlem Bekleyen Cihaz Sayısı</h5></div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Column -->
+                <!-- Column -->
+                <div class="col-lg-4 col-md-6">
+                    <a href="IslemTamamlananlar">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex flex-row">
+                                    <div class="round align-self-center round-info"><i class="fa fa-check"></i></div>
+                                    <div class="m-l-10 align-self-center">
+                                        <h3 class="m-b-0 text-dark">${islemTamamlananCihazSayisi}</h3>
+                                        <h5 class="text-muted m-b-0">İşlem Tamamlanan Cihaz Sayısı</h5></div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
 
+                </div>
+
+                <!-- Column -->
+            </div>
 
         </div>
-
+        <!-- ============================================================== -->
+        <!-- End Container fluid  -->
+        <!-- ============================================================== -->
     </div>
+    <!-- ============================================================== -->
+    <!-- End Page wrapper  -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- footer -->
+    <!-- ============================================================== -->
 
+    <c:import url="inc/Footer.jsp"></c:import>
+    <!-- ============================================================== -->
+    <!-- End footer -->
+    <!-- ============================================================== -->
 </div>
-
-<c:if test="${kontrol=='success'}">
-    <script>
-        $("btn").ready(function () {
-            toastr.success("${mesaj}","Başarılı");
-        });
-    </script>
-</c:if>
-<c:if test="${kontrol=='error'}">
-    <script>
-        $("btn").ready(function () {
-            toastr.error("${mesaj}","Hata");
-        });
-    </script>
-</c:if>
-
 
 <!-- Bootstrap popper Core JavaScript -->
 <script src="resources/assets/node_modules/popper/popper.min.js"></script>
@@ -153,27 +126,5 @@
 <!-- ============================================================== -->
 
 <script src="resources/assets/toastr/toastr.js"></script>
-
-<script>
-    toastr.options = {
-        "closeButton": true,
-        "debug": true,
-        "newestOnTop": false,
-        "progressBar": true,
-        "positionClass": "toast-bottom-right",
-        "preventDuplicates": false,
-        "onclick": null,
-        "showDuration": "300",
-        "hideDuration": "1000",
-        "timeOut": "8000",
-        "extendedTimeOut": "1000",
-        "showEasing": "swing",
-        "hideEasing": "linear",
-        "showMethod": "fadeIn",
-        "hideMethod": "fadeOut"
-    }
-
-</script>
-
 </body>
 </html>

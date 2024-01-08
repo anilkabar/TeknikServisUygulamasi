@@ -72,9 +72,9 @@
 
                                 </thead>
                                 <tbody>
-                                <c:forEach items="${cihazlarList}" var="item">
+                                <c:forEach items="${cihazlarList}" var="item" varStatus="sayac">
                                     <tr>
-                                        <td>1</td>
+                                        <td>${sayac.index+1}</td>
                                         <td>${item.marka}</td>
                                         <td>${item.model}</td>
                                         <td>${item.isletimSistemi}</td>
@@ -109,6 +109,21 @@
     </div>
 
 </div>
+
+<c:if test="${kontrol=='success'}">
+    <script>
+        $("btn").ready(function () {
+            toastr.success("${mesaj}","Başarılı");
+        });
+    </script>
+</c:if>
+<c:if test="${kontrol=='error'}">
+    <script>
+        $("btn").ready(function () {
+            toastr.error("${mesaj}","Hata");
+        });
+    </script>
+</c:if>
 
 <!-- Bootstrap popper Core JavaScript -->
 <script src="resources/assets/node_modules/popper/popper.min.js"></script>
