@@ -1,6 +1,7 @@
 package com.example.teknikdeneme22.controller;
 
 
+import com.example.teknikdeneme22.Util.Util;
 import com.example.teknikdeneme22.entities.model.Users;
 import com.example.teknikdeneme22.repositories.IUsersRepository;
 import jakarta.servlet.http.HttpServletRequest;
@@ -21,6 +22,9 @@ public class LoginController {
 
     @Autowired
     HttpServletRequest httpServletRequest;
+
+    @Autowired
+    Util util;
 
 
     @GetMapping({"","/"})
@@ -50,6 +54,11 @@ public class LoginController {
         }
 
         return "redirect:/";
+    }
+
+    @GetMapping("/Logout")
+    public String logout(){
+        return util.logout();
     }
 
 }

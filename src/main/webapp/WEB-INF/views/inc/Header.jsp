@@ -46,7 +46,7 @@
                         <!-- text-->
                         <div class="dropdown-divider"></div>
                         <!-- text-->
-                        <a href="logout" class="dropdown-item"><i class="fa fa-power-off"></i> Çıkış Yap</a>
+                        <a href="Logout" class="dropdown-item"><i class="fa fa-power-off"></i> Çıkış Yap</a>
                         <!-- text-->
                     </div>
                 </li>

@@ -36,4 +36,17 @@ public class Util {
         return new IslemBekleyenVeTAmamlananlar(12,1);
     }
 
+    public String logout() {
+
+        // all session remove
+        req.getSession().invalidate();
+
+        // single session remove
+        req.getSession().removeAttribute("kullanici");
+
+        return "redirect:/";
+    }
+
+
+
 }
