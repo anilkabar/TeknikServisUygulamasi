@@ -22,6 +22,7 @@ public class Cihazlar{
     private String isletimSistemi;
     private String seriNumarasi;
     private String sikayet;
+    private Boolean isActive;
 
 
 }

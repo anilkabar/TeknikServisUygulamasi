@@ -49,8 +49,59 @@
             <div class="row page-titles">
 
             </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">İşlem Bekleyen Cihazlar</h4>
+                            <h6 class="card-subtitle">Aşağıdaki Tabloda İşlem Bekleyen Cihazlar Listelenmektedir. İşlemi Tamamlanan Cihazı Listeden Kaldırmak İçin  İşlem Tamamlandı Butonunu Kullanabilirsiniz</h6>
+                            <table class="table color-table info-table table-hover">
+                                <thead>
 
-      ana
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Marka</th>
+                                        <th>Model</th>
+                                        <th>İşletim Sistemi</th>
+                                        <th>Seri Numarası</th>
+                                        <th width="440px">Şikayet</th>
+                                        <th>İslem</th>
+
+                                    </tr>
+
+
+                                </thead>
+                                <tbody>
+                                <c:forEach items="${cihazlarList}" var="item">
+                                    <tr>
+                                        <td>1</td>
+                                        <td>${item.marka}</td>
+                                        <td>${item.model}</td>
+                                        <td>${item.isletimSistemi}</td>
+                                        <td>${item.seriNumarasi}</td>
+                                        <td>${item.sikayet}</td>
+                                        <td>
+
+                                            <a href="/IslemYap/${item.id}"><span class="label label-inverse"><i class="fa fa-mail-reply"></i> İşlem Tamamlandı</span></a>
+
+
+
+                                        </td>
+                                    </tr>
+                                </c:forEach>
+
+
+
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
 
 
         </div>

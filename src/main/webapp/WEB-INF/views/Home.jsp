@@ -63,7 +63,7 @@
                                     <label class="col-sm-1 control-label">Marka :</label>
                                     <div class="col-sm-3">
                                         <div class="input-group">
-                                            <input name="marka" type="text" class="form-control">
+                                            <input name="marka" type="text" class="form-control" required>
                                         </div>
                                     </div>
                                 </div>
@@ -72,7 +72,7 @@
                                     <label class="col-sm-1 control-label">Model :</label>
                                     <div class="col-sm-3">
                                         <div class="input-group">
-                                            <input name="model" type="text" class="form-control">
+                                            <input name="model" type="text" class="form-control" required>
                                         </div>
                                     </div>
                                 </div>
@@ -80,7 +80,7 @@
                                     <label class="col-sm-1 control-label">İşletim Sistemi :</label>
                                     <div class="col-sm-3">
                                         <div class="input-group">
-                                            <input name="isletimSistemi" type="text" class="form-control">
+                                            <input name="isletimSistemi" type="text" class="form-control" required>
                                         </div>
                                     </div>
                                 </div>
@@ -88,7 +88,7 @@
                                     <label class="col-sm-1 control-label">Seri Numarası :</label>
                                     <div class="col-sm-3">
                                         <div class="input-group">
-                                            <input name="seriNumarasi" type="text" class="form-control">
+                                            <input name="seriNumarasi" type="text" class="form-control" required>
                                         </div>
                                     </div>
                                 </div>
@@ -96,7 +96,7 @@
                                     <label class="col-sm-1 control-label">Şikayet :</label>
                                     <div class="col-sm-3">
                                         <div class="input-group">
-                                <textarea class="form-control" name="sikayet" rows="4" cols="50"></textarea>
+                                <textarea class="form-control" name="sikayet" rows="4" cols="50" required></textarea>
                                         </div>
                                     </div>
                                 </div>
