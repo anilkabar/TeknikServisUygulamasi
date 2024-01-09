@@ -33,7 +33,7 @@ public class IslemBekleyenler {
 
         List<Cihazlar> cihazlarList=cihazlarRepository.findAllByIsActive(true);
         model.addAttribute("cihazlarList",cihazlarList);
-        return "IslemBekleyenler";
+        return util.control("IslemBekleyenler");
     }
 
     @GetMapping("/IslemYap/{id}")
@@ -53,7 +53,7 @@ public class IslemBekleyenler {
         }
 
 
-        return "IslemBekleyenler";
+        return util.control("IslemBekleyenler");
     }
 }
 

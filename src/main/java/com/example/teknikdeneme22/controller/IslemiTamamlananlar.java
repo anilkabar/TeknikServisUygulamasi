@@ -31,9 +31,6 @@ public class IslemiTamamlananlar {
         List<Cihazlar> cihazlarList=cihazlarRepository.findAllByIsActive(false);
         model.addAttribute("cihazlarList",cihazlarList);
         String control= util.control(controlName);
-        if (control==controlName){
-            model.addAttribute("mesaj","Lütfen Sızmaya Çalışmayın");
-        }
 
         return util.control("IslemiTamamlananlar");
 
