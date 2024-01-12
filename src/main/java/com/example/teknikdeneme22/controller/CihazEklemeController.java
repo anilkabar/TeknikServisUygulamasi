@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.Date;
+
 @Controller
 public class CihazEklemeController {
 
@@ -41,6 +43,7 @@ public class CihazEklemeController {
     public String cihazSave(Cihazlar cihazlar){
 
         cihazlar.setIsActive(true);
+        cihazlar.setEklenmeTarihi(new Date());
 
         if (cihazlarRepository.save(cihazlar)!=null){
 

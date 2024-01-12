@@ -52,7 +52,7 @@ public class KullaniciIslemleriController {
         }
         String password=users.getPassword();
         String password2=passwordAgain.toString();
-        int compare=password.compareTo(password2);
+        int compare=password.compareTo(password2); //karşılaştırma yaparak eğer içerik aynı ise sıfır değerini döndürüyor
         if (compare==0){
             usersRepository.save(users);
             kontrol="success";

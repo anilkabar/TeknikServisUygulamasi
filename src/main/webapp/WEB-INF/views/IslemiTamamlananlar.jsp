@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 
 <!DOCTYPE html>
 <html lang="tr">
@@ -65,6 +66,7 @@
                                     <th>İşletim Sistemi</th>
                                     <th>Seri Numarası</th>
                                     <th width="440px">Şikayet</th>
+                                    <th>Tarih</th>
 
 
                                 </tr>
@@ -81,6 +83,7 @@
                                         <td>${item.isletimSistemi}</td>
                                         <td>${item.seriNumarasi}</td>
                                         <td>${item.sikayet}</td>
+                                        <td>         <fmt:formatDate type="both" dateStyle="short" timeStyle="short" value="${item.tamamlanmaTarihi}" /></td>
 
                                     </tr>
                                 </c:forEach>

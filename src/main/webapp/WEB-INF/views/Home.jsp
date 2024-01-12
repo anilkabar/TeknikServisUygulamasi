@@ -112,6 +112,7 @@
     <!-- ============================================================== -->
 </div>
 
+
 <!-- Bootstrap popper Core JavaScript -->
 <script src="resources/assets/node_modules/popper/popper.min.js"></script>
 <script src="resources/assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>

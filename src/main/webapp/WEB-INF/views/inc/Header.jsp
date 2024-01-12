@@ -18,7 +18,7 @@
 
             </b>
                 <!--End Logo icon -->
-                <span class="hidden-xs">Servis </span>
+                <span class="hidden-xs">Servis</span>
             </a>
         </div>
         <!-- ============================================================== -->
@@ -31,7 +31,7 @@
             <ul class="navbar-nav mr-auto">
                 <!-- This is  -->
                 <li class="nav-item"> <a class="nav-link nav-toggler d-block d-sm-none waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
-                <li class="nav-item"> <a class="nav-link sidebartoggler d-none d-lg-block d-md-block waves-effect waves-dark" href="Home"><i class="icon-menu"></i></a> </li>
+                <li class="nav-item"> <a class="nav-link sidebartoggler d-none d-lg-block d-md-block waves-effect waves-dark" href="javascript:void(0)"><i class="icon-menu"></i></a> </li>
             </ul>
             <!-- ============================================================== -->
             <ul class="navbar-nav my-lg-0">
@@ -42,12 +42,11 @@
                     <div class="dropdown-menu dropdown-menu-right animated flipInY">
                         <!-- text-->
                         <!-- text-->
-
+                        <a href="KullaniciIslemleri" class="dropdown-item"><i class="ti-settings"></i> Kullanici İşlemleri</a>
                         <!-- text-->
                         <div class="dropdown-divider"></div>
                         <!-- text-->
-                        <a href="/KullaniciIslemleri" class="dropdown-item"><i class="fa fa-user"></i> Kullanici İslemleri</a>
-                        <a href="Logout" class="dropdown-item"><i class="fa fa-power-off"></i> Çıkış Yap</a>
+                        <a href="/Logout" class="dropdown-item"><i class="fa fa-power-off"></i> Çıkış Yap</a>
                         <!-- text-->
                     </div>
                 </li>

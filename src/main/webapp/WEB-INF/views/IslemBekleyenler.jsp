@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 
 <!DOCTYPE html>
 <html lang="tr">
@@ -65,6 +66,7 @@
                                         <th>İşletim Sistemi</th>
                                         <th>Seri Numarası</th>
                                         <th width="440px">Şikayet</th>
+                                        <th>Tarih</th>
                                         <th>İslem</th>
 
                                     </tr>
@@ -80,6 +82,8 @@
                                         <td>${item.isletimSistemi}</td>
                                         <td>${item.seriNumarasi}</td>
                                         <td>${item.sikayet}</td>
+                                        <td>
+                                            <fmt:formatDate type="both" dateStyle="short" timeStyle="short" value="${item.eklenmeTarihi}" /></td>
                                         <td>
 
                                             <a href="/IslemYap/${item.id}"><span class="label label-inverse"><i class="fa fa-mail-reply"></i> İşlem Tamamlandı</span></a>

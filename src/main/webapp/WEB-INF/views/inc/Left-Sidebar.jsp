@@ -6,7 +6,7 @@
         <!-- Sidebar navigation-->
         <nav class="sidebar-nav">
             <ul id="sidebarnav">
-                <li class="nav-small-cap">--- PERSONAL</li>
+                <li class="nav-small-cap">--- Menüler</li>
                 <li> <a class="waves-effect waves-dark" href="Home"><i class="icon-speedometer"></i><span class="hide-menu">Anasayfa</span></a>
                 </li>
                 <li> <a class="waves-effect waves-dark" href="CihazEkleme" aria-expanded="false"><i class="fa fa-save"></i><span class="hide-menu">Cihaz Ekleme </span></a>

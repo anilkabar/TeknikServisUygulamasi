@@ -2,8 +2,12 @@ package com.example.teknikdeneme22.Util;
 
 import com.example.teknikdeneme22.repositories.ICihazlarRepository;
 import jakarta.servlet.http.HttpServletRequest;
+import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 
 @Service
@@ -39,6 +43,7 @@ public class Util {
 
         return "redirect:/";
     }
+
 
 
 

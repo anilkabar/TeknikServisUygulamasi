@@ -11,4 +11,5 @@ import java.util.List;
 public interface ICihazlarRepository extends JpaRepository<Cihazlar,Long> {
     List<Cihazlar> findAllByIsActive(Boolean isActive);
 
+
 }
