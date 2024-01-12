@@ -44,6 +44,12 @@ public class KullaniciIslemleriController {
 
     @PostMapping("KullaniciEkle")
         public String addUsers(Users users,String passwordAgain){
+        Optional<Users> optionalUsers=usersRepository.findByUserName(users.getUserName());
+        if (optionalUsers.isPresent()){
+            kontrol="error";
+            mesaj="Eklemeye Çalıştığınız Kullanıcı İsmi Kayıtlı";
+            return "redirect:/KullaniciIslemleri";
+        }
         String password=users.getPassword();
         String password2=passwordAgain.toString();
         int compare=password.compareTo(password2);

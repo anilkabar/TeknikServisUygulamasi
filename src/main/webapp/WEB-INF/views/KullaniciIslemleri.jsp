@@ -64,7 +64,7 @@
                                     <label class="col-sm-3 control-label">Şifre :</label>
                                     <div class="col-sm-9">
                                         <div class="input-group">
-                                            <input name="password" type="text" class="form-control" required>
+                                            <input name="password" type="password" class="form-control" required>
                                         </div>
                                     </div>
                                 </div>
@@ -72,7 +72,7 @@
                                     <label class="col-sm-3 control-label">Şifre Tekrar :</label>
                                     <div class="col-sm-9">
                                         <div class="input-group">
-                                            <input name="passwordAgain" type="text" class="form-control" required>
+                                            <input name="passwordAgain" type="password" class="form-control" required>
                                         </div>
                                     </div>
                                 </div>
@@ -98,7 +98,6 @@
                                 <tr>
                                     <th>#</th>
                                     <th>Kullanıcı Adı</th>
-                                    <th>Şifre</th>
                                     <th>İşlem</th>
 
                                 </tr>
@@ -109,7 +108,6 @@
                                         <tr>
                                             <td>${sayac.index+1}</td>
                                             <td>${item.userName}</td>
-                                            <td>${item.password}</td>
                                             <td>
 
 
