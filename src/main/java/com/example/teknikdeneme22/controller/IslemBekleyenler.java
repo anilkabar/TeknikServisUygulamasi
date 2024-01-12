@@ -1,7 +1,6 @@
 package com.example.teknikdeneme22.controller;
 
 
-import com.example.teknikdeneme22.Util.IslemBekleyenVeTAmamlananlar;
 import com.example.teknikdeneme22.Util.Util;
 import com.example.teknikdeneme22.entities.model.Cihazlar;
 import com.example.teknikdeneme22.repositories.ICihazlarRepository;
@@ -10,8 +9,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import java.util.Optional;
@@ -39,7 +36,6 @@ public class IslemBekleyenler {
     @GetMapping("/IslemYap/{id}")
     public String FirmaSil(@PathVariable Long id,Model model){
 
-        IslemBekleyenVeTAmamlananlar islem=new IslemBekleyenVeTAmamlananlar();
 
         Optional<Cihazlar> optionalCihazlar=cihazlarRepository.findById(id);
         if (optionalCihazlar.isPresent()){

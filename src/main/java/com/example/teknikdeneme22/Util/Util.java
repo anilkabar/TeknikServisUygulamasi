@@ -29,13 +29,6 @@ public class Util {
     }
 
 
-    public IslemBekleyenVeTAmamlananlar IslemBekleyenveTamamlananlar(){
-        int islemBekleyenToplamCihazSayisi=cihazlarRepository.findAllByIsActive(true).size();
-        int islemTamamlananCihazSayisi=cihazlarRepository.findAllByIsActive(false).size();
-
-        return new IslemBekleyenVeTAmamlananlar(12,1);
-    }
-
     public String logout() {
 
         // all session remove

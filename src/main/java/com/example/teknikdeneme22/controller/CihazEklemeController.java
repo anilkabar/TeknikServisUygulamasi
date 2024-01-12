@@ -37,18 +37,8 @@ public class CihazEklemeController {
     }
 
     @PostMapping("/CihazEkle")
-    public String cihazSave(@Valid @ModelAttribute("cihazEkle") Cihazlar cihazlar){
+    public String cihazSave(Cihazlar cihazlar){
 
-        /*
-        Cihazlar cihaz=new Cihazlar();
-        cihaz.setId(cihazlar.getId());
-        cihaz.setIsletimSistemi(cihazlar.getIsletimSistemi());
-        cihaz.setMarka(cihazlar.getMarka());
-        cihaz.setModel(cihazlar.getModel());
-        cihaz.setSikayet(cihazlar.getSikayet());
-        cihaz.setSeriNumarasi("number");
-
-         */
         cihazlar.setIsActive(true);
 
         if (cihazlarRepository.save(cihazlar)!=null){
