@@ -27,7 +27,7 @@ public class LoginController {
     Util util;
 
 
-    @GetMapping({"","/"})
+    @GetMapping({"","/","Login"})
     public String Login(Model model){
         if ( !mesaj.equals("") ) {
             model.addAttribute("mesaj", mesaj);

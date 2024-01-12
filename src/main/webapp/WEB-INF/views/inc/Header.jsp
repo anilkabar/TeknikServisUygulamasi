@@ -8,7 +8,7 @@
         <!-- Logo -->
         <!-- ============================================================== -->
         <div class="navbar-header">
-            <a class="navbar-brand" href="Dashboard">
+            <a class="navbar-brand" href="Home">
                 <!-- Logo icon --><b>
                 <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                 <!-- Dark Logo icon -->
@@ -46,6 +46,7 @@
                         <!-- text-->
                         <div class="dropdown-divider"></div>
                         <!-- text-->
+                        <a href="/KullaniciIslemleri" class="dropdown-item"><i class="fa fa-user"></i> Kullanici İslemleri</a>
                         <a href="Logout" class="dropdown-item"><i class="fa fa-power-off"></i> Çıkış Yap</a>
                         <!-- text-->
                     </div>
