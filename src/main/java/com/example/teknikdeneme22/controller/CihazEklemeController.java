@@ -18,11 +18,12 @@ public class CihazEklemeController {
 
 
 
-    @Autowired
+    @Autowired //Enjekte etmemize yarar bu anatosyonu kullanmasaydık constructi
     private ICihazlarRepository cihazlarRepository;
 
     @Autowired
     private Util util;
+
 
     String mesaj="";
     String kontrol="";

@@ -9,10 +9,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
-@Entity
-@NoArgsConstructor
-@AllArgsConstructor
+@Data  // getir setir için kullanılır
+@Entity //veritabanı nesnesi olduğunu belirtir
+@NoArgsConstructor //parametresiz constructor üretir
+@AllArgsConstructor  //parametreli constructor üretir
 public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
